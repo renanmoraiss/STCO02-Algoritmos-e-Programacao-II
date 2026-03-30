@@ -1,15 +1,19 @@
 #include <stdio.h>
 
-void insertionSort(int A[], int n);
+int insertionSort(int A[], int n);
 
 int main() {
-    int vet[] = {3, 5, 2, 6, 1, 4};
-    int tamanho = 6;
-    insertionSort(vet, tamanho);
+    int vet[] = {-5, -1, 0, 3, 2, -2, 4};
+    int tamanho = 7;
+    int contador = insertionSort(vet, tamanho);
+    for (int k = 0; k < tamanho; k++) {
+        printf("%d ", vet[k]);
+    } printf("\n");
+    printf("movimentacoes: %d", contador);
     return 0;
 }
 
-void insertionSort(int A[], int n) {
+int insertionSort(int A[], int n) {
     int i;
     int totalMovimentacoes = 0;
     for (i = 1; i < n; i++) {
@@ -22,9 +26,5 @@ void insertionSort(int A[], int n) {
         }
         A[j+1] = pivo;
     }
-    int k;
-    for (k = 0; k < n; k++) {
-        printf("%d ", A[k]);
-    } printf("\n");
-    printf("movimentos: %d", totalMovimentacoes);
+    return totalMovimentacoes;
 }
