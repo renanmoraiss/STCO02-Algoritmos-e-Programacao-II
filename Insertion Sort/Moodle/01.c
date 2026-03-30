@@ -3,8 +3,8 @@
 void insertionSort(int A[], int n);
 
 int main() {
-    int vet[] = {18, 21, 3, 2, 1, 4, 7, 6, 10, 12};
-    int tam = 10;
+    int vet[] = {10, -3, 7, 0, -1, 5, 2, -3};
+    int tam = 8;
     insertionSort(vet, tam);
     for (int k = 0; k < tam; k++) {
         printf("%d ", vet[k]);

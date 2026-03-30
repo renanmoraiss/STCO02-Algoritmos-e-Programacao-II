@@ -3,8 +3,8 @@
 void selectionSort(int A[], int n);
 
 int main() {
-    int v[] = {9, 7, 5, 4, 1};
-    int tamanho = 5;
+    int v[] = {10, -3, 7, 0, -1, 5, 2};
+    int tamanho = 7;
     selectionSort(v, tamanho);
     for (int k = 0; k < tamanho; k++) {
         printf("%d ", v[k]);
